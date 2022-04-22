@@ -1,5 +1,18 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
 
+/*
+CSS Table of contents:
+1. Timeline
+2. 
+
+*/
+
+
+
+
+/*******************************************************************************************
+TIMELINE
+********************************************************************************************/
 
 *{
     
@@ -17,10 +30,42 @@ html {
 }
 
 .container{
-    min-height: 100vh;
+    min-height: 100vh; /*minimum 100% height of viewport*/
     width: 100%;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: center; /*aligns the flexible container's items when the items do not use all the available space in the container*/
     background-color: #101010;
+}
+
+.timeline {
+    width: 80%;
+    height: auto;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.timeline ul{
+    list-style: none; /*removes bullet points*/
+
+}
+
+.timeline ul li{
+    padding: 20px;
+    background-color: #1e1f22;
+    color: white; /*specifies color of text*/
+    border: solid 5px;
+    border-radius: 10px; /*defines the radius of the element's colors - allows you to round elements*/
+    margin-bottom: 20px;
+    
+}
+
+.timeline ul li:last-child{ /*matches the element that is the last child of its parent. In this case, the last li element of timeline ul li*/
+    margin-bottom: 50px;
+
+}
+
+.timeline ul li:first-child{ /*matches the element that is the first child of the parent element. In this case, the first li element of timeline ul li*/
+    margin-top: 50px;
+
 }
