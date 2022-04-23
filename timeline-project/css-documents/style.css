@@ -73,14 +73,14 @@ html {
 }
 
 .timeline-content h1{
-    font-size: 25px;
+    font-size: 21px;
     font-weight: 500;
     line-height: 30px;
     margin-bottom: 10px;
 }
 
 .timeline-content p{
-    font-size: 16px;
+    font-size: 12px;
     line-height: 30px; /*set the line height difference for every div element - it' just line spacing lol*/
     font-weight: 300;
 }
@@ -90,6 +90,17 @@ MEDIA ONLY SECTION
 ********************************************************************************************/
 
 @media only screen and (min-width: 768px){ /*When the browser window is 768 px wide or more*/
+    .container::before{ /*creates a pseudo-element that is the first child of the element selected*/
+        content:'';
+        position: absolute;
+        height: 2500px;
+        width: 2px;
+        background-color: grey;
+        left: 50%;
+        transform: translateX(-50%); /*Respositions an element horizontally on the 2D plane*/
+
+    }
+   
     .timeline ul li{
         width: 50%; /*set the width of the elements when the browser window is 768 px wide or more*/
         position: relative;
@@ -100,11 +111,60 @@ MEDIA ONLY SECTION
     .timeline ul li:nth-child(odd){ /*Chooses the odd children elements of the parent element*/
         float:left;
         clear: right;
+        transform: translateX(-30px); /*The gap between each of the element box and the line in the middle*/
     }
 
     .timeline ul li:nth-child(even){ /*Chooses the even children elements of the parent element*/
         float: right;
-        clear: left;
+        clear: left; /*Clears the one on the left*/
+        transform: translateX(30px); /*The gap between each of the element box and the line in the middle */
 
     }
+
+    .timeline ul li::after{/*creates a pseudo-element that is the last child of the selected element*/
+        content: '';
+        position: absolute;
+        height: 20px;
+        width: 20px;
+        background-color: gray;
+        border-radius: 50%;
+        top: 0;
+
+    }
+
+    .timeline ul li:nth-child(odd)::after{ /*creates a pseudo element that is the last child of the odd li*/
+        right: -42px;
+        transform: translate (50%, -50%);
+
+    }
+
+    .timeline ul li:nth-child(even)::after{
+        left: -42px;
+        transform: translate (-50%, 50%)
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 }
