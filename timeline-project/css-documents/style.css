@@ -13,6 +13,7 @@ CSS Table of contents:
     margin:0;
     padding:0;
     box-sizing: border-box;
+
         
 }
 
@@ -30,32 +31,90 @@ html {
 NAVIGATION BAR
 ********************************************************************************************/
 
-.navigation-bar{
-    background: white;
-    border-bottom: 1px solid #ddd;
+.navigation-bar{ 
+   
+     /*Other*/
+    background: black;
     box-shadow: 0 0 8px rgba(0,0,0,.1);
     display: flex;
     align-items: center;
+    flex: 1 0 auto;
     justify-content: space-between;
+    padding: 16px 50px;
+    gap: 32px;
+    border-bottom: solid 6px white;
+   
+    
 }   
 
 .profile-image{
-    background: royalblue;
+    background-color: white;
     box-shadow: inset 2px 2px 4px rgba(0, 0, 0, .5);
     border-radius: 50%;
-    width: 48px;
-    height:  48px;
+    width: 60px;
+    height: 60px;
 }
 
 .name{
     font-family: 'Montserrat', sans-serif;
     color: black;
-    font-size: 24px;
+    font-size: 36px;
     font-weight: 600;
+    color: white;
 }
 
 .links{
+    list-style-type: none;
     display: flex;
+    gap: 60px;
+    font-size: 24px;
+    justify-content: center;
+    
+
+
+}
+
+a{
+    position: relative;
+    color: gray;
+    text-decoration: none;
+    padding: 10px;
+    
+} 
+a:before, a:after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+} 
+/*Hover effect for timeline entries*/
+a:after{
+    content: "";
+    position: absolute;
+    background-color: red;
+    height: 3px;
+    width: 0;
+    left: 0;
+    bottom: 3px;
+    transition: 0.3s;
+}
+
+
+a:hover{
+    color: #ffffff;
+}
+
+
+a:hover:after{
+    width: 100%;
+}
+
+.navigation-bar-left-side{
+    display: flex;
+    gap: 40px;
+    align-items: center;
+    flex: 1 0 auto;
+
 }
     
 /*******************************************************************************************
@@ -65,7 +124,7 @@ TIMELINE HEADING
     position: relative;
     width: 300px;
     height: auto;
-    border: 1px solid grey;
+    border-style: none;
     font-family: 'Montserrat', sans-serif;
 
 }
@@ -85,6 +144,8 @@ TIMELINE HEADING
     letter-spacing: 2px;
     font-style: italic;
 }
+
+
 
 
 /*******************************************************************************************
@@ -184,7 +245,7 @@ MEDIA ONLY SECTION
         left: 50%;
         transform: translateX(-50%);
         width: 2px;
-        height: 100%;
+        height: 98%;
         background-color: gray;
       }
    
@@ -192,6 +253,7 @@ MEDIA ONLY SECTION
         width: 50%; /*set the width of the elements when the browser window is 768 px wide or more*/
         position: relative;
         margin-bottom: 50px;
+     
         
     }
 
