@@ -6,6 +6,58 @@ CSS Table of contents:
 2. Media
 
 */
+
+* {
+    
+    /*setting the box-sizing to border box: all padding and margin are accounted for */
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+        
+}
+
+
+
+    
+html {
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+}
+
+
+
+/*******************************************************************************************
+NAVIGATION BAR
+********************************************************************************************/
+
+.navigation-bar{
+    background: white;
+    border-bottom: 1px solid #ddd;
+    box-shadow: 0 0 8px rgba(0,0,0,.1);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}   
+
+.profile-image{
+    background: royalblue;
+    box-shadow: inset 2px 2px 4px rgba(0, 0, 0, .5);
+    border-radius: 50%;
+    width: 48px;
+    height:  48px;
+}
+
+.name{
+    font-family: 'Montserrat', sans-serif;
+    color: black;
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.links{
+    display: flex;
+}
+    
 /*******************************************************************************************
 TIMELINE HEADING
 ********************************************************************************************/
@@ -14,6 +66,7 @@ TIMELINE HEADING
     width: 300px;
     height: auto;
     border: 1px solid grey;
+    font-family: 'Montserrat', sans-serif;
 
 }
 
@@ -38,21 +91,7 @@ TIMELINE HEADING
 TIMELINE
 ********************************************************************************************/
 
-*{
-    
-/*setting the box-sizing to border box: all padding and margin are accounted for */
-
-    margin:0;
-    padding:0;
-    box-sizing: border-box;
-    
-}
-
-html {
-    font-family: 'Montserrat', sans-serif;
-    color: white;
-}
-
+/*Flex container*/
 .container{
     min-height: 100vh; /*minimum 100% height of viewport*/
     width: 100%;
@@ -125,21 +164,18 @@ MEDIA ONLY SECTION
 ********************************************************************************************/
 
 @media only screen and (min-width: 768px){ /*When the browser window is 768 px wide or more - applies when it is not a phone viewing (this website being viewed on computer/tablet*/
+ /**********************************Navigation bar*****************************************/
+
+ 
+ 
+ 
+ 
     /**********************************The line in the middle*****************************************/
     .timeline-heading{
         left: 50%;
         text-align: center;
         padding: 20px 0;
-        
-        
-        
-
     }
-
-    .timeline-heading h1{
-       font-family: 'Montserrat', sans-serif;
-    }
-
   
     .timeline:before {
         content: "";
@@ -158,6 +194,8 @@ MEDIA ONLY SECTION
         margin-bottom: 50px;
         
     }
+
+
 /**********************************Dates above header in the timeline elements*****************************************/
     .timeline-content .date{ 
         position: absolute;
