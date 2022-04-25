@@ -40,8 +40,8 @@ NAVIGATION BAR
     align-items: center;
     flex: 1 0 auto;
     justify-content: space-between;
-    padding: 16px 50px;
-    gap: 32px;
+    padding: 16px 60px;
+    gap: 24px;
     border-bottom: solid 6px white;
    
     
@@ -66,21 +66,44 @@ NAVIGATION BAR
 .links{
     list-style-type: none;
     display: flex;
-    gap: 60px;
     font-size: 24px;
-    justify-content: center;
-    
+    gap: 60px;
+    justify-content: flex-end;
+    flex: 1 0 auto;
 
 
 }
 
 a{
     position: relative;
-    color: gray;
+    color: #F2F3F5;
     text-decoration: none;
     padding: 10px;
     
 } 
+
+/*Reflection link id*/
+#reflection-link{
+    font-style: italic;
+    font-size: 22px;
+}
+#reflection-link:after{
+    background-color: yellow;
+}
+#emails-link:after{
+    background-color: lightblue;
+}
+#timeline-link:after{
+    background-color: red;
+}
+#entries-link:after{
+    background-color: blue;
+}
+#gallery-link:after{
+    background-color: orange;
+}
+
+
 a:before, a:after{
     margin: 0;
     padding: 0;
@@ -91,7 +114,6 @@ a:before, a:after{
 a:after{
     content: "";
     position: absolute;
-    background-color: red;
     height: 3px;
     width: 0;
     left: 0;
@@ -145,6 +167,27 @@ TIMELINE HEADING
     font-style: italic;
 }
 
+/*******************************************************************************************
+TIMELINE HEADING
+********************************************************************************************/
+.timeline-end{
+    position: relative;
+    margin-right: 30px;
+    width: 300px;
+    height: auto;
+    border-style: none;
+    font-family: "Montserrat", sans-serif;
+    left: -50%;
+    top: 1110px;
+}
+
+.timeline-end h1{
+    font-weight: 400;
+    letter-spacing: 2px;
+    font-size: 24px;
+}
+
+
 
 
 
@@ -160,10 +203,12 @@ TIMELINE
     align-items: center;
     justify-content: center; /*aligns the flexible container's items when the items do not use all the available space in the container*/
     background-color: #101010;
-    padding: 100px 0;
+    padding: 80px 0;
     border:0 ;
     position: absolute;
 }
+
+
 
 .timeline {
     width: 80%;
@@ -171,6 +216,8 @@ TIMELINE
     max-width: 800px;
     margin: 0 auto;
     position: relative;
+    left: 10%;
+    
  
 }
 
@@ -188,7 +235,7 @@ TIMELINE
     border: solid 1px;
     margin-bottom: 20px;
     
-}
+}   
 
 .timeline ul li:last-child{ /*matches the element that is the last child of its parent. In this case, the last li element of timeline ul li*/
     margin-bottom: 50px;
