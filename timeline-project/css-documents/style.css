@@ -1,26 +1,386 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
 
+/*
+CSS Table of contents:
+1. Timeline
+2. Media
 
-*{
+*/
+
+* {
     
-/*setting the box-sizing to border box: all padding and margin are accounted for */
-
+    /*setting the box-sizing to border box: all padding and margin are accounted for */
     margin:0;
     padding:0;
     box-sizing: border-box;
-    
+
+        
 }
 
+
+
+    
 html {
     font-family: 'Montserrat', sans-serif;
     color: white;
 }
 
+
+
+/*******************************************************************************************
+NAVIGATION BAR
+********************************************************************************************/
+
+.navigation-bar{ 
+   
+     /*Other*/
+    background: black;
+    box-shadow: 0 0 8px rgba(0,0,0,.1);
+    display: flex;
+    align-items: center;
+    flex: 1 0 auto;
+    justify-content: space-between;
+    padding: 16px 60px;
+    gap: 24px;
+    border-bottom: solid 6px white;
+   
+    
+}   
+
+.profile-image{
+    background-color: white;
+    box-shadow: inset 2px 2px 4px rgba(0, 0, 0, .5);
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+}
+
+.name{
+    font-family: 'Montserrat', sans-serif;
+    color: black;
+    font-size: 36px;
+    font-weight: 600;
+    color: white;
+}
+
+.links{
+    list-style-type: none;
+    display: flex;
+    font-size: 24px;
+    gap: 60px;
+    justify-content: flex-end;
+    flex: 1 0 auto;
+
+
+}
+
+a{
+    position: relative;
+    color: #F2F3F5;
+    text-decoration: none;
+    padding: 10px;
+    
+} 
+
+/*Reflection link id*/
+#reflection-link{
+    font-style: italic;
+    font-size: 22px;
+}
+#reflection-link:after{
+    background-color: yellow;
+}
+#emails-link:after{
+    background-color: lightblue;
+}
+#timeline-link:after{
+    background-color: red;
+}
+#entries-link:after{
+    background-color: blue;
+}
+#gallery-link:after{
+    background-color: orange;
+}
+
+
+a:before, a:after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+} 
+/*Hover effect for timeline entries*/
+a:after{
+    content: "";
+    position: absolute;
+    height: 3px;
+    width: 0;
+    left: 0;
+    bottom: 3px;
+    transition: 0.3s;
+}
+
+
+a:hover{
+    color: #ffffff;
+}
+
+
+a:hover:after{
+    width: 100%;
+}
+
+.navigation-bar-left-side{
+    display: flex;
+    gap: 40px;
+    align-items: center;
+    flex: 1 0 auto;
+
+}
+    
+/*******************************************************************************************
+TIMELINE HEADING
+********************************************************************************************/
+.timeline-heading {
+    position: relative;
+    width: 300px;
+    height: auto;
+    border-style: none;
+    font-family: 'Montserrat', sans-serif;
+
+}
+
+.timeline-heading h1{
+    font-size: 24px;
+    font-weight: 400;
+    margin-bottom: 10px;
+    letter-spacing: 2px;
+}
+
+.timeline-heading h2{
+    font-size: 18px;
+    font-weight: 350;
+    margin-bottom: 10px;
+    margin-top: 5px;
+    letter-spacing: 2px;
+    font-style: italic;
+}
+
+/*******************************************************************************************
+TIMELINE HEADING
+********************************************************************************************/
+.timeline-end{
+    position: relative;
+    margin-right: 30px;
+    width: 300px;
+    height: auto;
+    border-style: none;
+    font-family: "Montserrat", sans-serif;
+    left: -43%;
+    top: 1135px;
+}
+
+.timeline-end h1{
+    font-weight: 400;
+    letter-spacing: 2px;
+    font-size: 24px;
+    margin: 10px;
+}
+
+
+
+
+
+/*******************************************************************************************
+TIMELINE
+********************************************************************************************/
+
+/*Flex container*/
 .container{
-    min-height: 100vh;
+    min-height: 100vh; /*minimum 100% height of viewport*/
     width: 100%;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: center; /*aligns the flexible container's items when the items do not use all the available space in the container*/
     background-color: #101010;
+    padding: 80px 0;
+    border:0 ;
+    position: absolute;
+}
+
+
+
+.timeline {
+    width: 80%;
+    height: auto;
+    max-width: 800px;
+    margin: 0 auto;
+    position: relative;
+    left: 10%;
+    
+ 
+}
+
+.timeline ul{
+    list-style: none; /*removes bullet points*/
+
+}
+
+
+/**************LIST ITEMS IN TIMELINE****************/
+.timeline ul li{
+    padding: 20px;
+    background-color: #1e1f22;
+    color: white; /*specifies color of text*/
+    border: solid 1px;
+    margin-bottom: 20px;
+    
+}   
+
+.timeline ul li:last-child{ /*matches the element that is the last child of its parent. In this case, the last li element of timeline ul li*/
+    margin-bottom: 50px;
+
+}
+
+.timeline ul li:first-child{ /*matches the element that is the first child of the parent element. In this case, the first li element of timeline ul li*/
+    margin-top: 50px;
+
+}
+
+.timeline-content h1{
+    font-size: 21px;
+    font-weight: 500;
+    line-height: 30px;
+    margin-bottom: 10px;
+}
+
+.timeline-content p{
+    font-size: 12px;
+    line-height: 30px; /*set the line height difference for every div element - it' just line spacing lol*/
+    font-weight: 300;
+}
+
+.timeline-content .date{
+    font-size: 13px;
+    font-weight: 300;
+    margin-bottom: 10px;
+    letter-spacing: 2px;
+}
+
+/*******************************************************************************************
+MEDIA ONLY SECTION
+********************************************************************************************/
+
+@media only screen and (min-width: 768px){ /*When the browser window is 768 px wide or more - applies when it is not a phone viewing (this website being viewed on computer/tablet*/
+ /**********************************Navigation bar*****************************************/
+
+ 
+ 
+ 
+ 
+    /**********************************The line in the middle*****************************************/
+    .timeline-heading{
+        left: 50%;
+        text-align: center;
+        padding: 20px 0;
+    }
+  
+    .timeline:before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 2px;
+        height: 98%;
+        background-color: gray;
+      }
+   
+    .timeline ul li{
+        width: 50%; /*set the width of the elements when the browser window is 768 px wide or more*/
+        position: relative;
+        margin-bottom: 50px;
+     
+        
+    }
+
+
+/**********************************Dates above header in the timeline elements*****************************************/
+    .timeline-content .date{ 
+        position: absolute;
+        top: -25px;
+    }
+     /**********************************Odd timeline boxes*****************************************/
+
+    .timeline ul li:nth-child(odd){ /*Chooses the odd children elements of the parent element*/
+        float:left;
+        clear: right;
+        border-radius: 20px 0px 20px 20px; /*defines the radius of the element's colors - allows you to round elements*/
+        transform: translateX(-30px); /*The gap between each of the element box and the line in the middle*/
+    }
+/**********************************Even timeline boxes*****************************************/
+
+    .timeline ul li:nth-child(even){ /*Chooses the even children elements of the parent element*/
+        float: right;
+        clear: left; /*Clears the one on the left*/
+        border-radius: 0px 20px 20px 20px;
+        transform: translateX(30px); /*The gap between each of the element box and the line in the middle */
+
+    }
+
+    .timeline ul li::after{/*creates a pseudo-element that is the last child of the selected element*/
+        content: '';
+        position: absolute;
+        height: 20px;
+        width: 20px;
+        background-color: gray;
+        border-radius: 50%;
+        top: 0;
+
+    }
+/**********************************The dots besides the timeline elements*****************************************/
+    .timeline ul li:nth-child(odd)::after{ /*creates a pseudo element that is the last child of the odd li*/
+        right: -42px;
+        transform: translate (50%, -50%);
+
+    }
+
+    .timeline ul li:nth-child(even)::after{
+        left: -42px;
+        transform: translate (-50%, 50%)
+    }
+
+/**********************************Hover effect for timeline elements*****************************************/
+    .timeline ul li:hover:after{ /*changing the ::after pseudo element (the dots)*/
+        -webkit-transition: all .5s ease-in-out;
+        background-color: red;
+        transition: all .5s ease-in-out; /*the effect starts slowly, goes fast, and ends slowly*/
+       
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 }
