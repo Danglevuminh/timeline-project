@@ -177,14 +177,15 @@ TIMELINE HEADING
     height: auto;
     border-style: none;
     font-family: "Montserrat", sans-serif;
-    left: -50%;
-    top: 1110px;
+    left: -43%;
+    top: 1135px;
 }
 
 .timeline-end h1{
     font-weight: 400;
     letter-spacing: 2px;
     font-size: 24px;
+    margin: 10px;
 }
 
 
