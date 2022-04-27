@@ -1,4 +1,8 @@
 <!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
 <html>
     <head>
         <meta charset="utf-8">
@@ -9,13 +13,13 @@
         <link rel="stylesheet" href="css-documents/style.css">
     </head>
     <body>
-
+    
 <!--****************************************************************
 NAVIGATION BAR
 ****************************************************************-->
     
-
-<div class = "navigation-bar">
+<div class = "main-nav">
+    <div class = "navigation-bar">
 
         <div class ="navigation-bar-left-side">
         <div class = "name"> 
@@ -30,9 +34,9 @@ NAVIGATION BAR
     <!--Links to other webpages-->
     
         <ul class = "links">
-            <li><a id = "timeline-link" href = "index.html">Timeline</a></li>
+            <li><a id = "timeline-link"href = "index.html">Timeline</a></li>
             <li><a id = "entries-link" href = "#">Entries</a></li>
-            <li><a id = "gallery-link" href = "#">Gallery</a></li>
+            <li><a id = "gallery-link"href = "#">Gallery</a></li>
         </ul>
 
 
@@ -44,16 +48,14 @@ NAVIGATION BAR
 
     </div> <!--Navigation bar div-->
 
-
+</div>
 
 <!--****************************************************************
 TIMELINE
 ****************************************************************-->
 
 
-   <!--****************************************************************
-    Timeline heading
-    ****************************************************************-->
+
     </div> <!--Timeline heading-->
         <div class = "container">
             
@@ -76,10 +78,10 @@ TIMELINE
                         FIRST LI
                         ****************************************************************-->
 
-                    <li>
+                    <li class = "section hidden">
 
                         <div class = "timeline-content">
-                            <h2 class = "date">may 20th 2022</h2>
+                            <h2 id = "first-heading"class = "date">may 20th 2022</h2>
                             <h1>Head 1</h1>
 
                                 <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque minima in officiis blanditiis ratione reprehenderit soluta quae, vel dolorum, aperiam, molestiae 
@@ -98,7 +100,7 @@ TIMELINE
                     <!--****************************************************************
                         SECOND LI
                         ****************************************************************-->
-                    <li>
+                    <li class = "section hidden">
 
                         <div class = "timeline-content">
                             <h2 class = "date">may 20th 2022</h2>
@@ -124,7 +126,7 @@ TIMELINE
                         ****************************************************************-->
 
 
-                    <li>
+                    <li class = "section hidden">
 
                         <div class = "timeline-content">
                             <h2 class = "date">may 20th 2022</h2>
@@ -149,7 +151,7 @@ TIMELINE
                         FOURTH LI
                         ****************************************************************-->
                 
-                    <li>
+                        <li class ="section hidden">
 
                         <div class = "timeline-content">
                             <h2 class = "date">may 20th 2022</h2>
@@ -172,7 +174,7 @@ TIMELINE
                     <!--****************************************************************
                         FIFTH LI
                         ****************************************************************-->
-                    <li>
+                        <li class ="section hidden">
 
                         <div class = "timeline-content">
                             <h2 class = "date">may 20th 2022</h2>
@@ -196,7 +198,7 @@ TIMELINE
                         SIXTH LI
                         ****************************************************************-->
 
-                    <li>
+                        <li class ="section hidden">
 
                         <div class = "timeline-content">
                             <h2 class = "date">may 20th 2022</h2>
@@ -218,7 +220,7 @@ TIMELINE
                         ****************************************************************-->
                     
 
-                    <li>
+                        <li class ="section hidden">
 
                         <div class = "timeline-content">
                             <h2 class = "date">may 20th 2022</h2>
@@ -243,7 +245,7 @@ TIMELINE
                     <!--****************************************************************
                         EIGHTH LI
                         ****************************************************************-->
-                    <li>
+                        <li class ="section hidden">
 
                         <div class = "timeline-content">
                             <h2 class = "date">may 20th 2022</h2>
@@ -266,7 +268,7 @@ TIMELINE
                         <!--****************************************************************
                         NINTH LI
                         ****************************************************************-->
-                        <li>
+                        <li class ="section hidden">
 
                             <div class = "timeline-content">
                                 <h2 class = "date">may 20th 2022</h2>
@@ -288,10 +290,10 @@ TIMELINE
                         <!--****************************************************************
                         TENTH LI
                         ****************************************************************-->
-                    <li>
+                    <li class ="section hidden">
 
                         <div class = "timeline-content">
-                            <h2 class = "date">may 20th 2022</h2>
+                            <h2 id = "last-heading" class = "date">may 20th 2022</h2>
                             <h1>Head 10</h1>
 
                                 <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque minima in officiis blanditiis ratione reprehenderit soluta quae, vel dolorum, aperiam, molestiae 
@@ -333,19 +335,14 @@ TIMELINE
                 </div> <!--Timeline end-->
 
 
-
+        
 
 
         </div> <!--Div class container-->
 
-
-
-
-
-
-
-
-
-        
+    <!--Javascript content-->
+    <script src="js-documents/script.js"></script>
+            
     </body>
+    
 </html>

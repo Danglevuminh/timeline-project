@@ -70,8 +70,6 @@ NAVIGATION BAR
     gap: 60px;
     justify-content: flex-end;
     flex: 1 0 auto;
-
-
 }
 
 a{
@@ -188,10 +186,6 @@ TIMELINE HEADING
     margin: 10px;
 }
 
-
-
-
-
 /*******************************************************************************************
 TIMELINE
 ********************************************************************************************/
@@ -204,13 +198,10 @@ TIMELINE
     align-items: center;
     justify-content: center; /*aligns the flexible container's items when the items do not use all the available space in the container*/
     background-color: #101010;
-    padding: 80px 0;
+    padding: 100px 0 150px 0;
     border:0 ;
     position: absolute;
 }
-
-
-
 .timeline {
     width: 80%;
     height: auto;
@@ -218,13 +209,21 @@ TIMELINE
     margin: 0 auto;
     position: relative;
     left: 10%;
-    
- 
 }
 
 .timeline ul{
     list-style: none; /*removes bullet points*/
+}
 
+/**************TIMELINE HIDDEN EFFECT****************/
+.section{
+    clear: both;
+    margin-bottom: 30px;
+    opacity: 1;
+    transition: opacity 2s ease;
+}
+.hidden{
+    opacity: 0;
 }
 
 
@@ -234,18 +233,15 @@ TIMELINE
     background-color: #1e1f22;
     color: white; /*specifies color of text*/
     border: solid 1px;
-    margin-bottom: 20px;
-    
+    margin-bottom: 20px; 
 }   
 
 .timeline ul li:last-child{ /*matches the element that is the last child of its parent. In this case, the last li element of timeline ul li*/
     margin-bottom: 50px;
-
 }
 
 .timeline ul li:first-child{ /*matches the element that is the first child of the parent element. In this case, the first li element of timeline ul li*/
     margin-top: 50px;
-
 }
 
 .timeline-content h1{
